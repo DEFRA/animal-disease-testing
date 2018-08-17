@@ -1,0 +1,230 @@
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+/**
+ * Form elements styles
+ */
+
+fieldset {
+    margin: 2em 0;
+}
+
+legend, .legend {
+    width:100%;
+    padding: 0;
+    margin-bottom: 0.5em;
+    border: 0;
+    white-space: normal;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 24px;
+    color: #0b0c0c;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: none;
+    font-weight: 700;
+}
+
+select {
+    height:31px;
+    min-width: 80px;
+    padding: 2px 0 2px 4px;
+    border: none;
+    border: 1px solid #bfc1c3;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 31px;
+    vertical-align: middle;
+}
+
+select#sample_type {
+    width: 300px;
+}
+
+input {
+    .clinical-signs & {
+        float:left;
+        margin: 0 10px 10px 0;
+    }
+}
+
+label {
+    display:block;
+    padding:0.25em 0;
+    &:focus {
+        outline: 3px solid #ffbf47;
+    }
+    .clinical-signs & {
+        @media (max-width: 640px) {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+textarea {
+    @media (max-width: 640px) {
+        width:100%;
+    }
+}
+
+.input-2digits-wide {
+    width: 25px;
+}
+
+.input-4digits-wide {
+    width: 50px;
+}
+
+.block-label input {
+    position: static;
+    margin-right: 10px;
+}
+.block-label {
+    padding:15px 30px 15px 15px;
+    input {
+        position: static;
+        margin-right: 10px;
+    }
+
+    &.inline{
+        display: inline-block;
+        padding: 0.5em 1em 0.5em 0.5em;
+    }
+}
+.inline-label {
+    display: inline-block;
+}
+
+// Extending GOV.UK elements
+.form-control {
+    &--width-auto {
+        width: auto;
+    }
+    &--small {
+        width: 100px;
+    }
+}
+
+.step-form {
+    clear: both;
+}
+
+.block-label-client {
+    position:relative;
+    width:87%;
+    max-width: 800px;
+    margin-bottom: 10px;
+    padding:15px 30px 15px 15px;
+    background: #dee0e2;
+    border: 1px solid #dee0e2;
+    @include box-sizing(border-box);
+    @include mq(down,640px) {
+        width: 100%;
+    }
+    &:hover {
+        cursor:pointer;
+        border-color: #0b0c0c;
+    }
+    &.checked {
+        background: #FFF;
+        border-color: #0b0c0c;
+        outline: 3px solid #ffbf47;  
+        &:focus {
+            outline: 3px solid #ffbf47;
+        } 
+    }
+    .client-radio {
+        display: inline-block;
+        width: 5%;
+        vertical-align: top;
+        @include mq(down,640px) {
+            width: 30px;
+        }
+    }
+    .client-edit {
+        position: absolute;
+        display: none;
+        vertical-align: top;
+        @include mq(up,640px) {
+            top: 0;
+            right: -90px;
+        }
+        @include mq(down,640px) {
+            bottom: -58px;
+            left: -1px;
+        }
+    }
+    .client-block {
+        width: 80%;
+        display: inline-block;
+    }
+}
+
+.clientSearchResult {
+    &.selected,
+    &.current {
+        background: #fff;
+        border-color: #0b0c0c;
+        @include mq(down,640px) {
+            padding-bottom: 45px;
+        }
+        .client-edit {
+            display: block;
+        }
+    }
+}
+
+.inline-fields {
+    .field-wrapper {
+        display: inline-block;
+    }
+    input {
+        text-transform: none;
+        margin: 0 1em 1em 0;
+        padding: 0.5em;
+    }
+}
+
+.selectedOption{
+    background-color: #ffffff;
+    border: solid 1px #000000;
+}
+
+.note {
+    margin-top: 15px;
+}
+
+select.menulist,
+#edited_client_address_line6 {
+  -webkit-appearance: menulist;
+  -moz-appearance: menulist;
+  appearance: menulist;
+}
+
+.form--half {
+    @extend .push--top;
+    @extend .push--bottom;
+    float: left;
+    width:100%;
+
+    label {
+        float: left;
+        width: 100%;
+    }
+
+    input, select {
+        float: right;
+        width: 100%;
+    }
+
+    @include mq(up,500px) {
+        width:50%;
+
+        label {
+            width: 50%;
+        }
+
+        input, select {
+            width: 50%;
+        }
+    }
+}

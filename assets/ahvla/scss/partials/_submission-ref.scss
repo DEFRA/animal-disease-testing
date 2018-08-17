@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    $SUBMISSION REF VIEW
+\*------------------------------------*/
+/**
+ * Submission Reference Complete styles
+ */
+
+.submission-reference {
+    width: 100%;
+    margin: 1em 0 1em 0;
+    padding: 1.5em 0 1.5em 0;
+    color: #000;
+    background: #28a197;
+    text-align: center;
+
+    &__heading {
+        font-size: 36px;
+        margin: 0;
+    }
+
+    &__title {
+        margin: 0;
+    }
+
+    &__id {
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    // breakpoint
+    @include mq(down,456px) {
+        
+    }
+}

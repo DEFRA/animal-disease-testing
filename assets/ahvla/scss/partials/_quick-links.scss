@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    $Quick Links
+\*------------------------------------*/
+
+// ------------------------------ Quick Links Block
+
+.quick-links{
+    @include grid(1, 'li');
+    @extend .push-double--top;
+    margin-left: -2.5rem;
+
+    // -------------------------- Elements
+
+    &__item{
+        display: table;
+        padding-left: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    &__link{
+        display: table-cell;
+        width: 100%;
+        height: 12rem;
+        color: #000;
+        text-decoration: none;
+        line-height: 2.2rem;
+        border: 1px solid #ccc;
+        text-align: center;
+        vertical-align: middle;
+
+        &:hover{
+            background-color: #F9F9F9;
+        }
+    }
+
+    // -------------------------- Breakpoints
+
+    @include mq(up,500px) {
+        @include grid(2, 'li');
+    }
+
+    @include mq(up,640px) {
+        @include grid(3, 'li');
+    }
+
+    @include mq(up,768px) {
+        &__link{
+            padding: 0 30px;
+        }
+    }
+}

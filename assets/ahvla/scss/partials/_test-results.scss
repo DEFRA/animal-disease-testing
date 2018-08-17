@@ -1,0 +1,133 @@
+/*------------------------------------*\
+    $TEST-RESULTS
+\*------------------------------------*/
+/**
+ * 
+ */
+
+.testSearchResultTemplate {
+  list-style: none;
+  border-top: solid 1px $grey-2;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &.missing {
+    p {
+      margin: 15px 0;
+    }
+  }
+
+  .test-row {
+    position:relative;
+    padding: 0 0 0 0;
+    margin:0 0 20px 0;
+
+    p {
+      margin:0;
+      font-size:1.5rem;
+    }
+
+    .name {
+      margin:0 0 10px 0;
+    }
+
+    .turnaround {
+      margin:0 0 10px 0;
+    }
+
+    .accreditation {
+      margin:0 0 10px 0;
+    }
+
+    .sample-type {
+      margin:0 0 10px 0;
+      min-height:31px;
+    }
+
+    .test-type {
+      margin:0 0 10px 0;
+    }
+
+    .price {
+      position:absolute;
+      bottom:0;
+      right:0;
+      float:right;
+
+      p {
+        text-align:right;
+        margin:0 0 0.75em 0;
+
+        .large {
+          font-size: 2.2rem;
+          font-weight: bold;
+        }
+      }
+
+      input {
+        float:right;
+        margin:0;
+      }
+    }
+
+    .clear {
+      clear:both;
+    }
+  }
+}
+
+.adviser-wrapper-template {
+  margin-bottom: 20px;
+  border: 1px solid $grey-2;
+  padding: 10px 15px;
+  .header {
+    margin-top: 20px;
+  }
+  .footer {
+    border-top: 1px solid $grey-2;
+    dl {
+      margin: 15px 0 10px;
+      font-size: 15px;
+    }
+    dt {
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+  }
+}
+
+#sticky .test-hide {
+  display:none;
+}
+
+#sticky {
+  @include mq(up,1024px) {
+    width: 260px;
+  }
+}
+
+#sticky {
+  padding:20px;
+  background:
+    #dee0e2;
+
+  h2 {
+    margin-top:0;
+  }
+
+  input {
+    float: right;
+    margin: 10px 0 0 0;
+  }
+  @include mq(down,640px) {
+    position: fixed;
+  }
+}
+
+#sticky.stick {
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+}

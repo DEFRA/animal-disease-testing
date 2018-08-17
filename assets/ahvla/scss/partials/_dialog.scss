@@ -1,0 +1,79 @@
+/*------------------------------------*\
+    $DIALOGS
+\*------------------------------------*/
+/**
+ * The cancel submission dialog / popup
+ */
+
+#cancel-submission {
+  background: white;
+  position: static;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+#cancel-submission:not([open]) { display: block; }
+#cancel-submission::backdrop { display: none; }
+
+.js-enabled #cancel-submission { display: none; }
+.js-enabled #cancel-submission[open] { display: block; }
+.js-enabled #cancel-submission:not([open]) { display: none; }
+
+.js-enabled #cancel-submission {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 4;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border: 1px solid #6f777b;
+}
+
+.js-enabled .dialog-backdrop {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 3;
+  background-color: white transparent;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+// IE
+.opacityIE {
+  background:transparent;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99666666,endColorstr=#99666666);
+  zoom: 1;
+}
+
+.js-enabled .dialog-inner { padding: 15px; position: relative; }
+.js-enabled .dialog-close { position: absolute; right: 15px; top: 15px; }
+
+.js-enabled #cancel-submission {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 340px;
+    margin-top: 30px;
+    margin-left: -170px;
+    max-height: 90%;
+  }
+
+@media (min-width: 641px) {
+  .js-enabled #cancel-submission { position: fixed; top: 0; left: 50%; width: 600px; margin-top: 30px; margin-left: -300px; max-height: 90%; }
+}
+
+@media (min-width: 641px) { .js-enabled .dialog-inner { padding: 30px; } }
+
+@media (min-width: 641px) { .js-enabled .dialog-close { right: 30px; top: 30px; } }
+#cancel-submission .subtitle { color: #6f777b; }
+#cancel-submission ul, dialog ol { padding: 0; margin-bottom: 15px; }
+@media (min-width: 641px) { dialog ul, dialog ol { margin-top: 10px; margin-bottom: 5px; } }
+#cancel-submission ul li, dialog ol li { margin-bottom: 0.26316em; }
+#cancel-submission ul { padding: 0; }
+#cancel-submission ul li { list-style-type: disc; margin-left: 1.05263em; }
+#cancel-submission ol { list-style-type: decimal; margin-left: 1.31579em; }

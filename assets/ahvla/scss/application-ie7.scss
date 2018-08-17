@@ -1,0 +1,155 @@
+// BASE STYLESHEET FOR IE 7 COMPILER
+
+$is-ie: true;
+$ie-version: 7;
+
+@import "application.scss";
+
+.temp-submit {
+  width: auto;
+  border: none;
+  background: #0b0c0c;
+}
+
+.account-list {
+    li {
+        float:left;
+    }
+}
+
+.account-pvs {
+    text-align: right;
+}
+
+.submissions-filter {
+    float: left;
+}
+
+.clear-ie7 {
+    float: left;
+    width: 100%;
+    margin: 0;
+
+    .column-half {
+        width:50%;
+        padding: 0;
+    }
+}
+
+.removeFromBasket {
+    width:95px;
+}
+
+.account-management {
+    &__user {
+        text-align: right;
+
+        span {
+            text-align: right;
+            margin-right: 40px;
+        }
+    }
+
+    &__button{
+        padding-right: 0;
+    }
+
+    &__list {
+        width: auto;
+        padding: 47px 0px 22px 60px;
+    }
+}
+
+.quick-links{
+    margin-left: -20px;
+
+    // -------------------------- Elements
+
+    &__item{
+        display: block;
+        float: left;
+        width: 30% !important;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__link{
+        display: block;
+        height: 90px;
+        padding-top: 40px;
+    }
+}
+
+.form--half {
+    @extend .push--top;
+    @extend .push--bottom;
+    float: left;
+    width:50%;
+
+    label {
+        float: left;
+        width: 50%;
+    }
+
+    input, select {
+        float: right;
+        width: 50%;
+    }
+}
+
+.login {
+
+    &__form {
+            width: 50%;
+    }
+
+    &__message {
+        margin-left: 3%;
+    }
+}
+
+.block-label-client .client-radio,.block-label-client .client-block{
+    float: left;
+}
+
+.block-label-client .client-edit{
+    top: -2px;
+    right: -110px;
+}
+
+.practice-table td a {
+  display: block;
+}
+
+.login__form {
+    width: 50%;
+}
+
+.login__message {
+    margin-left: 3%;
+}
+
+.notice {
+  width: 100%;
+}
+
+#sendSamplesSelection .block-label{
+    width: 90%;
+}
+
+#footer .footer-meta .footer-meta-inner .open-government-licence .logo a {
+  background: url("/assets/images/open-government-licence-ie6.gif") 0 0 no-repeat;
+  background-size: 100%;
+  width: 50px;
+  height: 30px;
+}
+
+#footer .footer-meta .copyright {
+    float: right;
+    width: 150px;
+}
+
+#footer .footer-meta .footer-meta-inner {
+    width: 750px;
+    margin-top:130px;
+}

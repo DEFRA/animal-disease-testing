@@ -1,0 +1,108 @@
+/*------------------------------------*\
+    $ALERT BANNERS
+\*------------------------------------*/
+/**
+ * 
+ */
+
+.panel-success,.panel-warning,.panel-danger,.panel-info {
+    background: #e8f9f8;
+    border-left: 3px solid #28a197;
+    box-sizing: content-box;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-right: -15px;
+    padding: 15px 15px 30px 15px;
+}
+
+.panel-success ul,.panel-warning ul,.panel-danger ul,.panel-info ul {
+    margin-top: 10px;
+}
+
+.panel-success li,.panel-warning li,.panel-danger li,.panel-info li,.panel-success p,.panel-warning p,.panel-danger p,.panel-info p {
+    font-family: "nta",Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 300;
+    text-transform: none;
+}
+
+@media (max-width: 640px) {
+    %message-panel li,%message-panel p {
+        font-size:14px;
+    }
+}
+
+.panel-success p,.panel-warning p,.panel-danger p,.panel-info p {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.panel-success .heading-small,.panel-warning .heading-small,.panel-danger .heading-small,.panel-info .heading-small {
+    color: #28a197;
+    margin-top: 15px;
+}
+
+.panel-success {
+    background: #e8f9f8;
+    border-color: #28a197;
+}
+
+.panel-success .heading-small {
+    color: #28a197;
+}
+
+@media (min-width: 641px) {
+    .panel-success {
+        xmargin-left:-18px;
+        margin-right: 0;
+    }
+}
+
+.panel-warning {
+    background: #fde4d4;
+    border-color: #f47738;
+}
+
+.panel-warning .heading-small {
+    color: #f47738;
+}
+
+@media (min-width: 641px) {
+    .panel-warning {
+        margin-left:-18px;
+        margin-right: 0;
+    }
+}
+
+.panel-danger {
+    background: #fef7f7;
+    border-color: #df3034;
+}
+
+.panel-danger .heading-small {
+    color: #df3034;
+}
+
+@media (min-width: 641px) {
+    .panel-danger {
+        margin-left:-18px;
+        margin-right: 0;
+    }
+}
+
+.panel-info {
+    background: #d5e8f3;
+    border-color: #2b8cc4;
+}
+
+.panel-info .heading-small {
+    color: #2b8cc4;
+}
+
+@media (min-width: 641px) {
+    .panel-info {
+        margin-left:-18px;
+        margin-right: 0;
+    }
+}

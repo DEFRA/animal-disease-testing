@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    $PRACTICES TABLE VIEW
+\*------------------------------------*/
+/**
+ * Practices Table Mobile styles
+ */
+
+.practice-table {
+
+    // Mobile breakpoint
+    @include mq(down,456px) {
+        display: block; 
+        thead {
+            display: none;
+        }
+        tbody, th, td, tr {
+            display: block;
+        }
+        tr {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        td {
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 40%;
+        }
+        td:before { 
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            width: 35%; 
+            padding-right: 10px; 
+            white-space: nowrap;
+            text-align: left;
+            font-weight: bold;
+            white-space: pre;
+        }
+        td:nth-of-type(1):before { content: "Practice"; }
+        td:nth-of-type(2):before { content: "Practice code"; }
+
+        td:nth-of-type(3) {
+            padding: 25px;
+
+            a {
+                display: inline-block;
+                margin-right: 6%;
+            }
+        }
+
+        .text--center, .text--right {
+            text-align: left !important;
+        }
+    }
+
+    @include mq(up,457px) {
+        td:nth-of-type(3) {
+            a {
+                display: block;
+            }
+        }
+    }
+}

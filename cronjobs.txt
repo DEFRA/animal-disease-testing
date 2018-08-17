@@ -1,0 +1,8 @@
+# remove API request logs after 30 days
+# 0 1 * * * find /www/ahvla-beta/app/storage/logs/api-request-* -mtime +30 -exec rm {} \;
+
+# remove API error logs after 30 days
+# 0 1 * * * find /www/ahvla-beta/app/storage/logs/api-error-* -mtime +30 -exec rm {} \;
+
+# remove error logs after 30 days
+# 0 1 * * * find /www/ahvla-beta/app/storage/logs/errors-* -mtime +30 -exec rm {} \;

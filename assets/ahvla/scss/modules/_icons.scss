@@ -1,0 +1,19 @@
+%icon {
+    &:before {
+        display: inline-block;
+        position: relative;
+        content: '';
+        background-repeat: no-repeat;  
+    }
+}
+
+.icon--pdf {
+    @extend %icon;
+    &:before {
+        top: 10px;
+        width: 32px;
+        height: 32px;
+        padding-right: 8px;
+        background-image: url(/assets/images/icon-pdf.png);
+    }
+}

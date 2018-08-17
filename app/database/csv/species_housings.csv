@@ -1,0 +1,18 @@
+description,lims_code,for_avian_species
+Barn,BARN,1
+Controlled Environment,CONTRENV,1
+Climatic - Pen/Building,CLIMATIC,1
+Free Range,FREERANGE,1
+Commercial Cages,COMMCASE,1
+Other,OTHER,1
+Unknown,UNKNOWN,1
+Brooder rings,BROODER RINGS,1
+Pole barn,POLE BARN,1
+Slats,SLATS,1
+Barn,BARN,1
+Deep litter,DEEP LITTER,1
+Perchery,PERCHERY,1
+Housed,HOUSED,0
+Outdoor,OUTDOOR,0
+Mixed,MIXED,0
+Unknown,UNKNOWN,0

@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    $CLIENT-DETAILS
+\*------------------------------------*/
+/**
+ * 
+ */
+
+#global-cookie-message {
+  display: table;
+  width: 100%;
+  .message__wrapper {
+    max-width: 960px;
+    margin: auto;
+  }
+  p {
+    display: table-cell;
+    padding: 0;
+    &:first-child {
+      width: 100%;
+      padding-right: 0;
+    }
+    &:last-child {
+      white-space: nowrap;
+    }
+  }
+}

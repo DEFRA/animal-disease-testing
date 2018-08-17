@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    $SUBMISSION VIEW
+\*------------------------------------*/
+/**
+ * View submission page
+ */
+
+.submission-overview {
+    table {
+        max-width:600px;
+        margin-bottom: 60px;
+        &.samples {
+            margin-bottom: 20px;
+        }
+    }
+    &-samples {
+        padding-top: 10px;
+        margin-bottom: 30px;
+    }
+    &-samples-item {
+        margin-bottom: 20px;
+    }
+    .form {
+        &.float--left {
+            @include mq(down,640px) {
+                float: none !important;
+            }
+        }
+    }
+    table tbody tr.detail {
+      border-bottom: solid #fff;
+    }
+}

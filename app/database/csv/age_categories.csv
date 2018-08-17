@@ -1,0 +1,6 @@
+lims_code,description
+NEONATAL,neonatal (<1 week)
+ADULT,adult
+PRE-WEANED,pre-weaned
+MIXED,mixed
+NOT-KNOWN,I don't know

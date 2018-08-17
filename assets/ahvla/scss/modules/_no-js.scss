@@ -1,0 +1,57 @@
+
+/**
+* No JS only styles
+*/
+
+.no-js {
+
+	/* Hides elements when Javascript is disabled */
+	.no-js-hide {
+		display: none !important;
+	}
+
+	/* Shows elements when Javascript is disabled */
+	.no-js-show {
+		display: inline !important;
+	}
+
+	/* Hides cookie bar when Javascript is disabled */
+	#global-cookie-message {
+  		display: none !important;
+	}
+
+	/* Shows js-need-advice element when Javascript is disabled due to there being an inline style of display:none */
+	.js-need-advice {
+		display:block !important;
+	}
+	
+	/* Shows test-finder element when Javascript is disabled due to there being an inline style of display:none */
+	#test-finder {
+		display: block !important;
+	}
+
+	/* Shows test-advisor element when Javascript is disabled due to there being an inline style of display:none */
+	#test-advisor {
+		display: block !important;
+	}
+
+	/* Removes bottom margin on specific fieldset when Javascript is disabled to make it more aesthetically appealing */
+	.ValidationBoxField {
+		fieldset {
+			margin-bottom: 0;
+		}
+	}
+
+	/* Removes bottom margin on specific fieldset and form group when Javascript is disabled to make it more aesthetically appealing */
+	#editClientModeBox {
+		fieldset, .form-group{
+			margin-bottom: 0;
+		}
+	}
+}
+
+.js-enabled {
+	.js-hide {
+		display: none !important;
+	}
+}

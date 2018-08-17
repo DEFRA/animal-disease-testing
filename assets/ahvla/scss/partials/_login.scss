@@ -1,0 +1,52 @@
+/*------------------------------------*\
+    $LOGIN
+\*------------------------------------*/
+/**
+ * Login styles
+ */
+
+.login {
+	float: left;
+
+	&__form {
+		@extend .login;
+		width: 100%;
+	}
+
+	&__message {
+		@extend .login;
+		width: 100%;
+	}
+
+	&--half {
+		@include media(tablet){
+			float: left;
+			position: relative;
+			width: 50%;
+		}
+
+		.validation-summary {
+			width: 100%;
+		}
+
+		.form-control {
+		    width: 100%;
+		}
+	}
+
+	&--disabled {
+		margin-left: 0 !important;
+	}
+
+	// -------------------------- Breakpoints
+
+    @include mq(up,640px) {
+        &__form {
+			width: 50%;
+		}
+
+		&__message {
+			margin-left: 3%;
+		}
+    }
+}

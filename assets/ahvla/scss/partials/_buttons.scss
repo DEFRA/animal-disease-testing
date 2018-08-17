@@ -1,0 +1,125 @@
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+/**
+ * Button styles
+ */
+
+%button-base {
+    z-index: 4;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #0b0c0c;
+    border-width: 0 0 0 1px;
+    border-left-color: #222;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    overflow: hidden;
+    text-indent: -5000px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #0b0c0c;
+    background-repeat: no-repeat;
+    background-position: 2px 50%;
+ }
+
+.search-button {
+    @extend %button-base;
+    background-image: url('/assets/images/search-button.png');
+}
+
+.refresh-button {
+    @extend %button-base;
+    background-image: url('/assets/images/refresh-button.png');
+}
+
+.confirm-button {
+    z-index: 4;
+    width: auto;
+    height: 44px;
+    border: 1px solid #0b0c0c;
+    border-width: 0 0 0 1px;
+    border-left-color: #222;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    cursor: pointer;
+    color: #fff;
+    background-color: #0b0c0c;
+    padding: 10px 15px;
+    margin-top:10px;
+}
+
+.refresh-button2 {
+    margin-top: 15px;
+}
+
+.button-as-link {
+    padding: 0;
+    border: none;
+    background-color: white;
+    color: $link-colour;
+    cursor: pointer;
+    &:hover {
+        color: $link-hover-colour;
+    }
+}
+
+.button-as-link-step7 {
+  @extend .button-as-link;
+  margin-bottom:15px;
+}
+
+.button-warning {
+    background-color: $red;
+    padding: 0.30em 0.5em 0.1em 0.5em;
+    margin:0 0 9px 0;
+    &:hover, &:visited {
+        // GOV.UK button mixin uses 5%
+        background-color: darken($red,5%);
+    }
+
+    &.removeAnimalId {
+        width: 35px;
+        height: 35px;
+        padding: 3px 0 0 2px;
+    }
+
+    &.enableAnimal {
+        font-size: 18px;
+        color: #7D7D7D;
+        background-color: #DCDCDC;
+    }
+}
+
+.js-sign-select {
+  position: absolute;
+  width: 50%;
+  height: 47px;
+  outline: none;
+  background: url('/assets/images/trans.png') 0 0 repeat;
+
+  &:focus {
+    background-color: transparent;
+    outline: none;
+  }
+
+  @include mq(up, 641px) {
+    width: 30%;
+  }
+
+  @include mq(up, 1024px) {
+    width: 20%;
+  }
+}
+
+.remove--button {
+    float: left;
+    clear: left;
+    margin-top: 10px;
+}

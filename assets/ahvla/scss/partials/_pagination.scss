@@ -1,0 +1,91 @@
+/*------------------------------------*\
+    $PAGINATION
+\*------------------------------------*/
+/**
+ * 
+ */
+
+.previous-next-navigation {
+  position: relative;
+  overflow: hidden;
+  margin-top: 60px;
+  width: 100%;
+  padding-left: 0;
+
+  li {
+    font-family: "nta",Arial,sans-serif;
+    font-size: 27px;
+    line-height: 1.11111;
+    font-weight: 400;
+    text-transform: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    float: left;
+
+    a {
+      display: block;
+      text-decoration: none;
+
+      span {
+        display: block;
+        font-family: "nta",Arial,sans-serif;
+        font-size: 14px;
+        line-height: 1.42857;
+        font-weight: 400;
+        text-transform: none;
+        padding: 6px 0;
+      }
+    }
+
+    a:hover {
+      background: #f8f8f8;
+    }
+
+    .visuallyhidden {
+      font-family: "nta",Arial,sans-serif;
+      font-size: 27px;
+      line-height: 1.11111;
+      font-weight: 400;
+      text-transform: none;
+      display: inline-block;
+      position: static;
+    }
+  }
+
+  li.previous {
+    a {
+      padding: 15px 0 15px 35px;
+    }
+
+    a:before {
+      background: transparent url(/assets/images/icons/arrow-sprite.png) no-repeat -20px -11px;
+      margin: -4px 0 0 -32px;
+      display: block;
+      float: left;
+      width: 30px;
+      height: 38px;
+      content: " ";
+    }
+  }
+
+  li.next {
+    float: right;
+    text-align: right;
+
+    a:before {
+      background: transparent url(/assets/images/icons/arrow-sprite.png) no-repeat -102px -11px;
+      margin: -4px -32px 0 0;
+      display: block;
+      float: right;
+      width: 30px;
+      height: 38px;
+      content: " ";
+    }
+
+    a {
+      padding: 15px 35px 15px 0;
+    }
+  }
+}

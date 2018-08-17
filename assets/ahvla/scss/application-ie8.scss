@@ -1,0 +1,116 @@
+// BASE STYLESHEET FOR IE 8 COMPILER
+
+$is-ie: true;
+$ie-version: 8;
+
+@import "application.scss";
+
+.account-management {
+    &__user {
+        text-align: right;
+
+        span {
+        	text-align: right;
+            margin-right: 40px;
+        }
+    }
+
+    &__button{
+        padding-right: 0;
+    }
+
+    &__list {
+        width: auto;
+        padding: 47px 0px 22px 60px;
+    }
+}
+
+.quick-links{
+    margin-left: -20px;
+
+    // -------------------------- Elements
+
+    &__item{
+        display: block;
+        float: left;
+        width: 30% !important;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__link{
+        display: block;
+        height: 90px;
+        padding-top: 40px;
+    }
+}
+
+.form--half {
+    @extend .push--top;
+    @extend .push--bottom;
+    float: left;
+    width:50%;
+
+    label {
+        float: left;
+        width: 50%;
+    }
+
+    input, select {
+        float: right;
+        width: 50%;
+    }
+}
+
+.login {
+
+    &__form {
+            width: 50%;
+    }
+
+    &__message {
+        margin-left: 3%;
+    }
+}
+
+.practice-table td a {
+  display: block;
+}
+
+.block-label-client .client-edit{
+    top: -2px;
+    right: -90px;
+}
+
+.login__form {
+    width: 50%;
+}
+
+.login__message {
+    margin-left: 3%;
+}
+
+.notice {
+  width: 100%;
+}
+
+#footer .footer-meta .footer-meta-inner .open-government-licence .logo a {
+  background: url("/assets/images/open-government-licence-ie6.gif") 0 0 no-repeat;
+  background-size: 100%;
+  width: 50px;
+  height: 30px;
+}
+
+#footer .footer-meta .copyright {
+    float: right;
+    width: 150px;
+}
+
+#footer .footer-meta .footer-meta-inner {
+    width: 750px;
+    margin-top:130px;
+}
+
+.js-enabled #cancel-submission { display: none; }
+.js-enabled #cancel-submission[open] { display: block; }
+.js-enabled #cancel-submission:not([open]) { display: none; }

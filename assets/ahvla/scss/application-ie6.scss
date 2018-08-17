@@ -1,0 +1,260 @@
+// BASE STYLESHEET FOR IE 6 COMPILER
+
+$is-ie: true;
+$ie-version: 6;
+$mobile-ie6: false;
+
+@import "application.scss";
+
+// Search button
+.temp-submit {
+  width: auto;
+  border: none;
+  background: #0b0c0c;
+}
+
+// Nested grid within test results
+.grid-row {
+  .column-two-thirds {
+    .grid-row {
+      position: relative;
+      .column-two-thirds { 
+        width: 53%;
+      }
+      .column-third {
+        position: relative;
+        width: 30%;
+      }
+    } 
+  }
+}
+
+// Aligning the price
+.testSearchResultTemplate {
+  .test-row {
+    .price {
+      position: relative;
+      top: 130px;
+      height: 50px;
+    }
+    .name {
+      width: 380px;
+    }
+  }
+}
+
+#small-basket {
+  #sticky {
+    width: 260px;
+  }
+}
+
+.account-list {
+  li {
+    float:left;
+  }
+}
+
+.button-get-started {
+  @include bold-24;
+  background-image: file-url("icons/icon-pointer-ie6.gif");
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+  padding: em(5) em(41) em(4) em(16);
+}
+
+.account-pvs {
+  text-align: right;
+}
+
+.submissions-filter {
+  float: left;
+  display: inline-block;
+  width: 160px;
+}
+
+.steps-bar{
+  float: left;
+  width: 100%;
+  height: 65px;
+}
+
+.steps-bar ol li a{
+  height: 53px;
+}
+
+.delivery-address{
+  float: left;
+  clear: left;
+  width: 100%;
+}
+
+form {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+
+    p,h1,h2,h3,h4,h5,h6, article{
+      display: block;
+      width: 100%;
+    }
+}
+
+fieldset {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+#animalsMap{
+  display: block;
+  float: left;
+}
+
+.block-label{
+  width:100%;
+}
+.inline .block-label{
+  width: 100px;
+}
+
+#testSearchResults{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.testSearchResultTemplate {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.testSearchResultTemplate .test-row{
+  position: relative;
+}
+
+.testSearchResultTemplate .test-row .price {
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+}
+
+.price-review{
+  text-align:left;
+}
+
+.account-management {
+    &__user {
+        text-align: right;
+
+        span {
+          text-align: right;
+            margin-right: 40px;
+        }
+    }
+
+    &__button{
+      display: none;
+      padding-right: 0;
+    }
+
+    &__list {
+      position: relative;
+      float: right;
+      display: block;
+      width: auto;
+      text-align: right;
+      border:none;
+      padding: 0;
+    }
+
+    &__item{
+      display: block;
+      //float: left;
+      text-align: right;
+      margin: 0 0 7px 0;
+      padding: 0;
+    }
+}
+
+.quick-links{
+    margin-left: -20px;
+
+    // -------------------------- Elements
+
+    &__item{
+        display: block;
+        float: left;
+        width: 30% !important;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__link{
+        display: block;
+        height: 90px;
+        padding-top: 40px;
+    }
+}
+
+.form--half {
+    float: left;
+    width:50%;
+
+    label {
+        float: left;
+        width: 50%;
+    }
+
+    input, select {
+        float: right;
+        width: 50%;
+    }
+}
+
+.practice-table td a {
+  display: block;
+}
+
+.block-label-client .client-radio,.block-label-client .client-block{
+    float: left;
+}
+
+.block-label-client .client-edit{
+    top: -2px;
+    right: -110px;
+}
+
+#footer .footer-meta .footer-meta-inner .open-government-licence .logo a {
+  background: url("/assets/images/open-government-licence-ie6.gif") 0 0 no-repeat;
+  background-size: 100%;
+  width: 50px;
+  height: 30px;
+}
+
+#footer .footer-meta .copyright {
+    float: right;
+    width: 150px;
+}
+
+#footer .footer-meta .footer-meta-inner {
+    width: 750px;
+    margin-top:130px;
+}
+
+.login__form {
+    width: 50%;
+}
+
+.login__message {
+    margin-left: 3%;
+}
+
+.notice {
+  width: 100%;
+}

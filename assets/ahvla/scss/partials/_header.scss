@@ -1,0 +1,158 @@
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+/**
+ * Service banner, local header (logo and account)
+ */
+
+#global-header {
+  background:
+    #0b0c0c;
+}
+
+#global-breadcrumb {
+    background-color: #fff;
+    max-width: 1020px;
+    margin: 0 auto;
+    z-index: 50;
+
+    ol {
+        max-width: 960px;
+        margin: 0;
+        padding: 0.75em 0;
+
+        li {
+            font-family: "nta", Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.25;
+            font-weight: 400;
+            text-transform: none;
+            float: left;
+            list-style: none;
+            margin-left: 0;
+            margin-bottom: 0.4em;
+            padding-right: 1em;
+            background-image: none;
+            margin-right: 0;
+
+            a {
+                color: #0b0c0c;
+            }
+        }
+    }
+}
+
+.js-enabled #global-header .header-proposition #proposition-link,
+.js-enabled #global-header .header-proposition #proposition-links {
+    display: block;
+}
+
+.header-wrapper {
+  background:#0b0c0c;
+  max-width:990px;
+  margin:0 auto;
+  background:
+    #0b0c0c;
+}
+
+
+// Service Banner
+.phase-banner-beta {
+  @include phase-banner($state: beta);
+}
+
+// Local Header (Logo & Account)
+.apha-logo-image {
+  max-width: 100%;
+  margin-top: 18px;
+}
+
+// ------------------------------ Account Management Block
+
+.account-management {
+    @include core-16;
+
+    // -------------------------- Elements
+
+    &__user {
+        font-weight: bold;
+        text-align: left;
+        margin: 15px 0 0 0;
+
+        span {
+            font-weight: normal;
+            margin-right: 3rem;
+        }
+    }
+
+    &__menu {
+        position: relative;
+
+        &:hover .account-management__list {
+            display: block;
+        }
+    }
+    
+    &__button{
+        position: relative;
+        float: right;
+        margin: 14px 19px 19px 0;
+        padding-right: 15px;
+        z-index: 2;
+        text-decoration: none !important;
+
+        span {
+            text-decoration: underline;
+        }
+
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            float: right;
+            text-decoration: none !important;
+            content: "\203A";
+            -ms-transform: rotate(90deg); /* IE 9 */
+            -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+            transform: rotate(90deg);
+        }
+    }
+
+    &__list {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 100%;
+        text-align: right;
+        background: white;
+        padding: 47px 0px 22px 0px;
+        border: 1px solid #ccc;
+        z-index: 1;
+
+        &.access {
+            display: block;
+        }
+    }
+
+    &__item {
+        display: block;
+        width: auto;
+        margin: 13px 19px 0 0;
+    }
+
+    // -------------------------- Breakpoints
+
+    @include mq(up,501px) {
+        &__list {
+            width: auto;
+            min-width: 130px;
+            padding: 47px 0px 22px 60px;
+        }
+    }
+
+    @include mq(up,641px) {
+        padding: 5px 0;
+        text-align: right;
+    }
+}

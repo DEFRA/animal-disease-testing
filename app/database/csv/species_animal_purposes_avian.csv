@@ -1,0 +1,68 @@
+species_lims_code,lims_code,description,is_avian
+CATTLE,MILK,Dairy,0
+CATTLE,SUCKLER,Suckler,0
+CATTLE,FINISHER,Beef Finisher,0
+CATTLE,REARING,Calf Rearer,0
+CATTLE,CAPTZOO,Captive or Zoo,0
+CATTLE,UNKNOWN,Unknown,0
+CATTLE,NA,N/A,0
+SHEEP,HILLSHEEP,Hill,0
+SHEEP,LOWLAND,Lowland,0
+SHEEP,FINISHER,Lamb Finisher,0
+SHEEP,MILK,Dairy,0
+SHEEP,FIBRE,Fibre,0
+SHEEP,PET,Pet,0
+SHEEP,UNKNOWN,Unknown,0
+SHEEP,NA,N/A,0
+GOAT,HILLSHEEP,Hill,0
+GOAT,LOWLAND,Lowland,0
+GOAT,FINISHER,Lamb Finisher,0
+GOAT,MILK,Dairy,0
+GOAT,FIBRE,Fibre,0
+GOAT,PET,Pet,0
+GOAT,UNKNOWN,Unknown,0
+GOAT,NA,N/A,0
+,WILD,Wild,0
+,FIBRE,Fibre,0
+,PET,Pet,0
+,ZOO,Zoo,0
+,NA,N/A,0
+SHEEP,MEATGOAT,Meat(goat),0
+GOAT,MEATGOAT,Meat(goat),0
+,OPENFARM,Open farm,0
+,OTHERFARMED,"Other farmed(e.g. deer, bison, buffalo)",0
+,BREEDLAY,Breeder/Parent - Layer,1
+,CAPTZOO,Captive or Zoo,1
+,GAMEBIRD,Game,1
+,GAMEBREEDER,Game Breeder,1
+,GAMEREARING,Game Rearing,1
+,GBREEDMEAT,Breeder/Parent - Meat,1
+,NA,N/A,1
+,OTHER,Other,1
+,PET,"Pet/Backyard(Layer, Broiler, Breeding or Show)",1
+,PETBACKYARDBREEDINGSHOW,Pet Backyard Breeding/Show,1
+,PETBACKYARDOTHER,Pet Backyard Other,1
+,PRODLAY,Production - Layer,1
+,PRODMEAT,Production - Meat,1
+,UNKNOWN,Unknown,1
+,WILD,Wild,1
+PIG,WEANERGROWERPRODUCER,Weaner/grower producer,0
+PIG,BREEDERFINISHER,Breeder-finisher,0
+PIG,GILTUNIT,Gilt Unit,0
+PIG,NURSERY,Nursery,0
+PIG,NURSERYFINISHER,Nursery-finisher,0
+PIG,FINISHER,Finisher,0
+PIG,BOARSTUD,Boar stud,0
+PIG,CAPTIVEPET,Captive/Pet,0
+PIG,UNKNOWN,Unknown,0
+PIG,NA,N/A,0
+WILD_BOAR,WEANERGROWERPRODUCER,Weaner/grower producer,0
+WILD_BOAR,BREEDERFINISHER,Breeder-finisher,0
+WILD_BOAR,GILTUNIT,Gilt Unit,0
+WILD_BOAR,NURSERY,Nursery,0
+WILD_BOAR,NURSERYFINISHER,Nursery-finisher,0
+WILD_BOAR,FINISHER,Finisher,0
+WILD_BOAR,BOARSTUD,Boar stud,0
+WILD_BOAR,CAPTIVEPET,Captive/Pet,0
+WILD_BOAR,UNKNOWN,Unknown,0
+WILD_BOAR,NA,N/A,0

@@ -1,0 +1,55 @@
+/*------------------------------------*\
+    $Quick Links
+\*------------------------------------*/
+
+// ------------------------------ Quick Links Block
+
+.related{
+    margin-top: 30px;
+    border-top: 10px solid #005ea5;
+    padding-top: 5px;
+
+    // -------------------------- Elements
+
+    &__heading{
+        font-size: 24px;
+        line-height: 1.25;
+    }
+
+    &__subheading{
+        font-size: 20px;
+        line-height: 1.25;
+    }
+
+    &__nav{
+        margin-bottom: 1.25em;
+    }
+
+    &__list{
+        list-style: none;
+        font-size: 16px;
+        line-height: 1.25;
+    }
+
+    &__item{
+        margin-bottom: 0.75em;
+        padding-left: 0;
+    }
+
+    &__link{
+        background-position: 0 -287px;
+        background-repeat: no-repeat;
+        display: block;
+        line-height: 1.25em;
+        orphans: 2;
+
+        &--top{
+            @extend .related__link;
+            @extend .push-double--top;
+            @include mq(up,769px) {
+                display: none;
+            }
+        }
+    }
+
+}

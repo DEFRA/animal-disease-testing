@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    $REVIEW & SUBMIT VIEW
+\*------------------------------------*/
+/**
+ * Review basket page
+ */
+
+.review-basket {
+
+    // Mobile breakpoint
+    @include mq(down,456px) {
+        display: block; 
+        thead {
+            display: none;
+        }
+        tbody, th, td, tr {
+            display: block;
+        }
+        tr {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        td {
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%;
+        }
+        td:before { 
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            width: 45%; 
+            padding-right: 10px; 
+            white-space: nowrap;
+            text-align: left;
+            font-weight: bold;
+            white-space: pre;
+        }
+        td:nth-of-type(1):before { content: "Test"; }
+        td:nth-of-type(2):before { content: "Sample type"; }
+        td:nth-of-type(3):before { content: "Turnaround \A (on average)"; }
+        td:nth-of-type(4):before { content: "Qty"; }
+        td:nth-of-type(5):before { content: "Price"; }
+        td:nth-of-type(6):before { content: "Remove"; }
+
+        .text--center, .text--right {
+            text-align: left !important;
+        }
+    }
+}

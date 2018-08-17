@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    $CLINICAL SIGNS VIEW
+\*------------------------------------*/
+/**
+ * Clinical Signs styles
+ */
+
+.clinical-signs {
+
+    &__label {
+        cursor: pointer;
+        line-height: 36px;
+    }
+
+    &__input {
+        line-height: 30px;
+    }
+
+    &__validation {
+        display: none;
+        height: 30px;
+        line-height: 31px;
+        padding: 0 0 0 14px !important;
+        border-right: none !important;
+        border-top: none !important;
+        border-bottom: none !important;
+        margin: 0 0 20px 0 !important;
+
+        p {
+            margin: 10px 0 0 0;
+        }
+    }
+}

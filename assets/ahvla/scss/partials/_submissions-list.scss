@@ -1,0 +1,139 @@
+/*------------------------------------*\
+    $SUBMISSIONS LIST
+\*------------------------------------*/
+/**
+ * Searchable list of submissions on the landing page
+ */
+
+.submission-item {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid $border-colour;
+    @include mq(down,640px) {
+        padding: 5px;
+    }
+
+    // Submission ID and status label
+    .header {
+        &-left {
+            @include mq(up,440px) {
+                float: left;
+            }
+        }
+        &-right {
+            @include mq(up,440px) {
+                float: right;
+            }
+        }
+    }
+
+    // Submission info
+    .subheader {
+        overflow: hidden;
+        margin-bottom: 20px;
+        th {
+            padding-bottom: 0;
+        }
+        td {
+            @include mq(up,640px) {
+                padding-top: 0;
+                vertical-align: top;
+            }
+            @include mq(down,640px) {
+                position: relative;
+                left: 130px;
+                &:before {
+                    position: absolute; 
+                    top: 10px;
+                    left: -130px;
+                    font-weight: 700;
+                }
+                // Headers content inserted before for mobile
+                &:nth-child(1):before { content: 'Samples to'; }
+                &:nth-child(2):before { content: 'Client'; }
+                &:nth-child(3):before { content: 'Client farm'; }
+                &:nth-child(4):before { content: 'Species'; }
+                &:nth-child(5):before { content: 'Clinician'; }
+                &:nth-child(6):before { content: 'Order submitted'; }
+            }
+        }
+        th, td {
+            border-bottom: none;
+            @include mq(down,640px) {
+                display: block;
+            }
+        }
+        thead {
+            @include mq(down,640px) {
+                display: none;
+            }
+        }
+    } 
+}
+
+// Tests table
+.item-body {
+    overflow: hidden;
+    @include mq(down,450px) {
+        overflow: scroll;
+    }
+    .tests-table {
+        tr {
+            &:last-child {
+                td {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+.item-footer {
+  margin-top: 10px;
+}
+
+
+// Status labels base styling
+%status-base {
+    min-width: 150px;
+    padding: 5px 15px 0;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+}
+
+// GOV.UK colours
+.submission-status {
+    &-initial {
+        @extend %status-base;
+        background-color: $yellow;
+    }
+    &-cancel {
+        @extend %status-base;
+        background-color: $mauve;
+    }
+    &-overdue {
+        @extend %status-base;
+        background-color: $pink;
+    }
+    &-progress {
+        @extend %status-base;
+        background-color: $grass-green;
+    }
+}
+
+.submissions-filter {
+  margin-right: 20px;
+  display: inline-block;
+  vertical-align: top;
+  &.last {
+    margin-right: 0;
+    padding-top: 24px;
+  }
+}
+
+.submissions-filter input {
+  width: 140px;
+}

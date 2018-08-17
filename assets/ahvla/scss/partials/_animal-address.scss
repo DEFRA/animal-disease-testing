@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    $ANIMAL ADDRESS VIEW
+\*------------------------------------*/
+/**
+ * Animal address styles
+ */
+
+.animal-address {
+    &__wrap{
+        border: 1px solid black;
+        padding: 20px;
+    }
+
+    &__name{
+        margin:0;
+    }
+
+    &__address{
+        margin:0;
+    }
+
+    &__cph{
+        margin:0;
+    }
+}

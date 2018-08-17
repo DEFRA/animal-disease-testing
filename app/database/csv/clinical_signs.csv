@@ -1,0 +1,21 @@
+lims_code,description
+LIMS1,Abortion
+LIMS2,Malaise
+LIMS3,Musc/Skel - not lame
+LIMS4,Urinary
+LIMS5,Repro not abortion
+LIMS6,Diarrhoea
+LIMS7,Recumbent
+LIMS8,Nervous signs
+LIMS9,Clinical Mastitis
+LIMS10,GIT - not diarrhoea
+LIMS11,Found dead
+LIMS12,Eye disease
+LIMS13,Sub‑clinical Mastitis
+LIMS14,Wasting/Poor condition
+LIMS15,Respiratory
+LIMS16,Unknown
+LIMS17,Milk Drop
+LIMS18,Lameness
+LIMS19,Skin
+LIMS20,Healthy

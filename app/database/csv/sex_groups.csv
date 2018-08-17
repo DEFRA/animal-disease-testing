@@ -1,0 +1,6 @@
+lims_code,description,exclude_species_lims_codes
+FEMALE,female,
+MALE,male,
+CASTRATE,castrate,"AV_FARMED,AV_FARMED_G,AV_OTHER,AV_OTHER_O,AV_PSIT,AV_WILD,AV_BIRDS"
+MIXED,mixed,
+UNKNOWN,I don't know,

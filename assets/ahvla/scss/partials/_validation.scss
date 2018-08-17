@@ -1,0 +1,118 @@
+/*------------------------------------*\
+    $VALIDATION
+\*------------------------------------*/
+/**
+ * 
+ */
+
+ $error-colour: #b10e1e;
+
+
+// Newer styling, relying more on GOVUK elements
+// This one should be used everywhere
+
+.validation-summary {
+    width: 70%;
+    padding: 15px;
+    @include box-sizing(border-box);
+    @include mq(down,640px) {
+        width: 100%;
+    }
+    // Doubling up to override UL styling
+    .error-list.error-list {
+        padding-left: 20px;
+        list-style: disc;
+    }
+
+    &.info {
+        border-color: $govuk-blue;
+    }
+}
+
+.error-heading {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.validation {
+    margin-top: 15px;
+    padding-left: 15px;
+    border-left: 3px solid $error-colour;
+}
+
+.form-hint {
+    //overriding GOV.UK elements styling
+    margin-top: 0;
+    ul {
+        padding-left: 20px;
+        list-style: disc;
+    }
+}
+
+
+// Older styling, application specific
+// Used primarily on the submission step form
+// We're going to phase this one out...
+
+#validationGlobalDiv {
+    border: 5px solid $error-colour;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px 15px 15px 15px;
+
+    h2 {
+        font-size: 24px;
+        line-height: 1.25;
+        margin: 0 0 0.8333333333em 0;
+    }
+
+    a {
+        color: #b10e1e;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}
+
+.ValidationBoxField {
+    overflow: hidden;
+}
+
+.validation-error {
+    color: $error-colour;
+    font-weight: bold;
+    border-left: solid 4px $error-colour;
+    padding-left: 14px;
+    margin: 2em 0 1em 0;
+}
+
+.validation-error-box {
+    fieldset,
+    .validation-group {
+        border-left: solid 4px $error-colour;
+        padding-left: 14px;
+    }
+}
+
+form[name="registration_form"] .validation-error {
+  margin: 1em 0;
+}
+
+.form-group-error {
+    border: 5px solid $red;
+    padding: 0px 0 0px 14px !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+
+    input {
+        border: 4px solid  $red;
+    }
+}
+
+.error-message {
+    display: none;
+    color: $red;
+    margin: 0px;
+    padding: 2px 0;
+    font-weight: bold;
+}

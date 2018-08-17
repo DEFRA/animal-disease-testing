@@ -1,0 +1,596 @@
+/*------------------------------------*\
+    $TEST-RESULTS
+\*------------------------------------*/
+/**
+ * 
+ */
+
+#basketContainer { float:left; width: 100%; }
+
+#small-basket * { opacity: inherit; filter: inherit; }
+
+#fix-anchor { height: 80px; }
+
+/* Start of basket page styling */
+
+.basket-table {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 0 0 15px 0;
+    margin: 0 0 15px 0;
+    border-bottom: solid 1px $grey-2;
+
+    &__divide {
+        margin-bottom: 5px;
+    }
+
+    &.header { 
+        margin-top: -80px;
+        background: white;
+
+        p {
+            margin: 11px 0 5px 0;
+            font-weight: bold;
+        }
+
+        .animal-id {
+            p {
+                color: white;
+            }
+        }
+
+        .animal-id-list {
+            .price-col {
+                margin:10px 0;
+
+                p {
+                    margin-top:0;
+                }
+            }
+        }
+
+        @include mq(down,500px) {
+            //Hiding the table header
+            position: absolute; 
+            overflow: hidden; 
+            clip: rect(0 0 0 0); 
+            height: 1px; width: 1px; 
+            margin: -1px; padding: 0; border: 0;
+        }
+    }
+
+    &.fixed {
+      position: fixed;
+      top: 80px;
+      width: 94%;
+      max-width: 960px;
+      z-index: 10;
+    }
+
+    &.body {
+        border-bottom: none;
+    }
+
+    p {
+        font-size:1.5rem;
+    }
+
+    .item {
+        float: left;
+        width: 35%;
+        margin: 0 1% 0 0;
+        
+        @include mq(up,800px) {
+            width: 36%;
+        }
+        @include mq(down,768px) {
+            width: 40%;
+        }
+        @include mq(down,500px) {
+            float: none;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            margin:0 0 6px 0;
+        }
+
+        fieldset {
+            margin:0 0 1.05263em 0;
+        }
+
+        .sample-type {
+            p {
+                margin:0 0 3px 0;
+
+                strong {
+                    .maxPoolI {
+                        display: none;
+                        font-size: 12px;
+                        margin: 1px 0 8px 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .remove{
+        float: left;
+        clear: left;
+    }
+
+    .sample-type {
+        select {
+            float: left;
+            height: 32px;
+        }
+        .confirm {
+            float: left;
+            clear: left;
+        }
+        .updating-basket{
+            display: none;
+            clear: both;
+            float: left;
+            margin-top: 20px;
+        }
+        #pairedSerologyOptions{
+            float: left;
+            width: 90%;
+        }
+    }
+
+    .animal-id-list {
+        float: right;
+        width: 56%;
+        @include mq(up,800px) {
+            width: 63%;
+        }
+        @include mq(down,768px) {
+            width: 59%;
+        }
+        @include mq(down,500px) {
+            float: none;
+            width: 100%;
+        }
+
+        .product_animal_sample_id {
+            display: block;
+            margin-bottom: 20px;
+
+            @include mq(up,501px) {
+                float: left;
+                width: 100%;
+                height: 35px;
+                line-height: 29px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .sample-id {
+            float: left;
+            width: 26%;
+            margin: 0 2% 0 0;
+            padding-right: 3%;
+
+            input {
+                width: 100%;
+                opacity: 1;
+
+                &:disabled {
+                    opacity: 0.3;
+                }
+            }
+            @include mq(up,800px) {
+                width: 29%;
+            }
+            @include mq(down,500px) {
+                position: relative;
+                width: 100%;
+                margin-bottom: 8px;
+                &:before {
+                    position: absolute;
+                    top: 5px;
+                    width: 40%;
+                    content: 'Add sample ID';
+                    font-weight: bold;
+                }
+                input {
+                    position: relative;
+                    width: 50%;
+                    left: 50%;
+                }
+            }
+        }
+
+        .quantity {
+            float: left;
+            width: 19%;
+            margin: 0 2% 0 0;
+
+            @include mq(up,800px) {
+                width: 15%;
+                margin: 0 2% 0 0;
+            }
+            @include mq(down,768px) {
+                width: 19%;
+            }
+            @include mq(down,500px) {
+                position: relative;
+                width: 100%;
+                margin-bottom: 8px;
+                &:before {
+                    position: absolute;
+                    top: 5px;
+                    width: 40%;
+                    content: 'Animal ID';
+                    font-weight: bold;
+                }
+                p {
+                    text-align:left;
+                    margin-bottom: 0;
+                    padding-left: 51%;
+                }
+                .removeAnimalId {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .pool {
+            float: left;
+            width: 25%;
+            margin: 0;
+
+            .poolId{
+                width: 100%;
+                opacity: 1;
+
+                &:disabled {
+                    opacity: 0.3;
+                }
+            }
+            @include mq(down,768px) {
+                width: 22%;
+            }
+            @include mq(down,500px) {
+                position: relative;
+                width: 100%;
+                margin-bottom: 8px;
+
+                .poolId{
+                    width: 50%;
+                }
+
+                &:before {
+                    position: absolute;
+                    top: 5px;
+                    width: 40%;
+                    content: 'Pool group';
+                    font-weight: bold;
+                }
+                input {
+                    position: relative;
+                    width: 10%;
+                    left: 50%;
+                }
+            }
+        }
+
+        .price-col {
+            float: left;
+            width: 13%;
+            margin: 0;
+            text-align: right;
+
+            @include mq(down,500px) {
+                position: relative;
+                float: left;
+                width: 100%;
+                text-align: left;
+                &:before {
+                    position: absolute;
+                    top: 5px;
+                    width: 40%;
+                    content: 'Price';
+                    font-weight: bold;
+                }
+                p {
+                    margin-bottom: 0;
+                    text-align: left;
+                    padding-left: 51%;
+                }
+
+                &.pooled {
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .remove-animal {
+            float: right;
+            width: 8%;
+            margin: 0;
+            text-align: right;
+
+            .removeAnimalId {
+              margin-top: 0.2rem;
+              font-size: 1.5rem;
+            }
+        }
+    }
+
+    .paired-animal-samples {
+        float: right;
+        width: 56%;
+        @include mq(up,800px) {
+            width: 63%;
+        }
+        @include mq(down,768px) {
+            width: 59%;
+        }
+        @include mq(down,500px) {
+            float: none;
+            width: 100%;
+        }
+
+        .basket-table.header {
+            margin-top: 0px;
+            padding: 10px 0 5px 0;
+        }
+    }
+
+    .animal-row {
+        float: left;
+        width: 100%;
+    }
+
+    .pair-sample-id {
+        float: left;
+        width: 26%;
+        margin: 0 2% 0 0;
+        padding-right: 3%;
+
+        input {
+            width: 100%;
+        }
+        @include mq(up,800px) {
+            width: 29%;
+        }
+        @include mq(down,500px) {
+            position: relative;
+            width: 100%;
+            margin-bottom: 8px;
+            &:before {
+                position: absolute;
+                top: 5px;
+                width: 40%;
+                content: 'Add sample ID';
+                font-weight: bold;
+            }
+            input {
+                position: relative;
+                width: 50%;
+                left: 50%;
+            }
+        }
+    }
+
+    .animal-id {
+        float: left;
+        width: 19%;
+        margin: 0 2% 0 0;
+
+        @include mq(up,800px) {
+            width: 15%;
+            margin: 0 2% 0 0;
+        }
+        @include mq(down,768px) {
+            width: 19%;
+        }
+        @include mq(down,500px) {
+            position: relative;
+            width: 100%;
+            margin-bottom: 8px;
+            &:before {
+                position: absolute;
+                top: 5px;
+                width: 40%;
+                content: 'Animal ID';
+                font-weight: bold;
+            }
+            p {
+                text-align:left;
+                margin-bottom: 0;
+                padding-left: 51%;
+            }
+            .removeAnimalId {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .sample-date {
+        float: left;
+        width: 43%;
+        margin: 0;
+
+        .form-control {
+            width: 100%;
+        }
+
+        p {
+          margin: 11px 0 -3px 0;
+        }
+
+        span {
+          font-size: 14px;
+          color: gray;
+        }
+    }
+}
+
+.package {
+    float: left;
+    width: 93%;
+    border: solid 1px #bfc1c3;
+    padding: 15px;
+    margin: -16px 0 20px 0;
+
+    + .package{
+        margin: 0px 0 20px 0;
+    }
+
+    &__details {
+        display: block;
+        float: left;
+        width: 100%;
+        padding: 10px 0;
+        box-sizing: border-box;
+
+        .basket-table {
+            border-bottom: none;
+        }
+    }
+
+    &__tests {
+        float: left;
+        width: 100%;
+        padding: 20px;
+        background: $highlight-colour;
+        box-sizing: border-box;
+
+        .basket-table:last-of-type {
+            border-bottom: none;
+        }
+
+        .removingPackageAnimalID{
+            opacity: 0.3;
+        }
+
+        .groups__validation{
+            display: none !important;
+        }
+    }
+
+    @include mq(up,501px) {
+        width: 96.7%;
+    }
+
+}
+
+.groups {
+    float: right;
+    display: none;
+    width: 100%;
+    padding-top: 5px;
+
+    &__row {
+        float: left;
+        clear: both;
+        width: 100%;
+
+        &--total {
+            @extend .groups__row;
+        }
+    }
+
+    &__group {
+        float: left;
+        width: 50%;
+
+        p {
+            margin: 0 0 5px 0;
+        }
+    }
+
+    &__price {
+        float: left;
+        width: 50%;
+
+        p {
+            text-align: right;
+            margin: 0 0 5px 0;
+        }
+    }
+
+    &__total {
+        float: left;
+        width: 50%;
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    &__totalprice {
+        float: left;
+        width: 50%;
+
+        p {
+            font-size: 18px;
+            text-align: right;
+        }
+    }
+
+    &__validation {
+        display: none;
+        height: 30px;
+        line-height: 31px;
+        padding: 0 0 0 14px !important;
+        border-right: none !important;
+        border-top: none !important;
+        border-bottom: none !important;
+        margin: 0 !important;
+
+        p {
+            margin: 10px 0 0 0;
+        }
+    }
+
+    @include mq(up,501px) {
+        padding-top: 25px;
+        width: 30.7%;
+
+        &__group {
+            width: 51%;
+        }
+
+        &__price {
+            width: 27%;
+
+        }
+
+        &__total {
+            width: 51%;
+        }
+
+        &__totalprice {
+            width: 27%;
+        }
+    }
+}
+
+.removing-animals {
+    @extend .push--bottom;
+    display: none;
+
+    &__button {
+        @extend .button;
+    }
+
+    &__status {
+        display: none;
+    }
+}
+
+.non-pooled-sample {
+    border: 0px;
+}
+
+/* End of basket page styling */

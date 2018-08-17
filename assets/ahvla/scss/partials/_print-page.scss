@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    $PRINT PAGE
+\*------------------------------------*/
+/**
+ * Print Address and Dispatch labels
+ */
+
+.layout-blank {
+  padding: 50px;
+  @media print {
+    padding: 0;
+  }
+  table {
+    td {
+      padding-left: 10px;
+      // Overriding GOV.UK elements tables style
+      border-bottom: 0;
+    }
+  }
+
+  .bar-code {
+    width: 250px;
+  }
+  
+}

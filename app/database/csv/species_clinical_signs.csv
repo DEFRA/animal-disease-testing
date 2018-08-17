@@ -1,0 +1,38 @@
+lims_code,description,is_avian
+ABORTION,Abortion,0
+MALAISE,Malaise,0
+MUSC_SKEL,Musc/Skel - not lame,0
+URINARY,Urinary,0
+REPRO,Repro not abortion,0
+DIARRHOEA,Diarrhoea,0
+RECUMBT,Recumbent,0
+NERVOUS,Nervous signs,0
+MASTCLIN,Clinical Mastitis,0
+GIT_XDIARR,GIT - not diarrhoea,0
+FNDDEAD,Found dead,0
+EYE,Eye disease,0
+MASTSUB,Sub‑clinical Mastitis,0
+WASTING,Wasting/Poor condition,0
+RESPIR,Respiratory,0
+UNKNOWN,Unknown,0
+MILKDROP,Milk Drop,0
+LAME,Lameness,0
+SKIN,Skin,0
+OTHER,Other,0
+WASTING,Wasting/poor condition,1
+AB_FAEC,Abnormal faeces,1
+UGIT,Upper GIT signs,1
+VENT_CLOAC,Vent/cloacal disorders,1
+RECUMBT,Recumbent,1
+LAME,Lameness,1
+MUSC_SKEL,Musc/skel - not lame,1
+NERVOUS,Nervous signs,1
+RESPIR,Respiratory,1
+SKIN,Skin/feather,1
+FNDDEAD,Found dead,1
+NON_SPEC,Non specific clinical signs,1
+EGG_DROP,Egg drop,1
+EGG_QUAL,Egg quality,1
+INFERT,Infertility/poor hatchability,1
+UNKNOWN,Unknown,1
+OTHER,Other,1

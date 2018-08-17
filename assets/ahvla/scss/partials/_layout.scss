@@ -1,0 +1,31 @@
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+/**
+ * Layout styles
+ */
+
+.row {
+    float: left;
+    clear: left;
+    width: 100%;
+    margin-bottom: 10px;
+    @include box-sizing(border-box);
+}
+
+.clear {
+    @extend .cf;
+}
+
+.landing-section{
+	@extend .push-double--bottom;
+	margin-top: 50px;
+}
+
+.help {
+	width: 80%;
+    padding: 0 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
